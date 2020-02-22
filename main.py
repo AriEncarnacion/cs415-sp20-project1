@@ -2,8 +2,7 @@
 # fib.x runs fibonacci.py functions
 # gcd.x runs gcd.py functions
 
-import fibonacci as fib
-import gcd as gcd
+from algorithms import gcd as gcd, fibonacci as fib
 import plots as plot
 
 
