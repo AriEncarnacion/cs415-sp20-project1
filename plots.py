@@ -28,3 +28,7 @@ def gcdModsPlot(gcdModsArr):
     plt.legend()
     plt.show()
     print("gcdModsArr:", gcdModsArr)
+
+# expPlots
+def decByOnePlot(expArr):
+    print("expArr:", expArr)
