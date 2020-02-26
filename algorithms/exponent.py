@@ -1,43 +1,45 @@
-def decByOne(a, n):
+import math
+
+
+def dec_by_one(a, n):
     if n == 0:
         return 1
-    return decByOne(a, n - 1) * a
+    return dec_by_one(a, n - 1) * a
 
-def dboCount(a, n):
+
+def dbo_count(a, n):
     if n == 0:
         return 0
-    return dboCount(a, n - 1) +1
+    return dbo_count(a, n - 1) + 1
 
 
-def decByFctr(a, n):
-    if n == 0:
-        return 1
-    if n % 2 == 0:
-        result = decByFctr(a, n/2)
-        return result * result
-    result2 = decByFctr(a, (n-1) / 2)
-    return result2 * result2
-
-
-def dbfCount(a, n):
-    if n == 0:
-        return 0
-    if n % 2 == 0:
-        return dbfCount(a, n/2) + 1
-    return dbfCount(a, (n-1) / 2) + 1
-
-
-def divAndConq(a, n):
+def dec_by_fctr(a, n):
     if n == 0:
         return 1
     if n % 2 == 0:
-        return divAndConq(a, (n/2)) * divAndConq(a, (n/2))
-    return a * divAndConq(a, (n - 1)/2) * divAndConq(a, (n - 1)/2)
+        return dec_by_fctr(a, n / 2) ** 2
+    return a * dec_by_fctr(a, (n - 1) / 2) ** 2
 
 
-def dacCount(a, n):
+def dbf_count(a, n):
     if n == 0:
         return 0
     if n % 2 == 0:
-        return dacCount(a, (n/2)) + 1
-    return dacCount(a, (n - 1)/2) + 2
+        return dbf_count(a, n / 2) + 1
+    return dbf_count(a, (n - 1) / 2) + 1
+
+
+def div_and_conq(a, n):
+    if n == 0:
+        return 1
+    if n % 2 == 0:
+        return div_and_conq(a, (n / 2)) * div_and_conq(a, (n / 2))
+    return a * div_and_conq(a, (n - 1) / 2) * div_and_conq(a, (n - 1) / 2)
+
+
+def dac_count(a, n):
+    if n == 0:
+        return 0
+    if n % 2 == 0:
+        return dac_count(a, (n / 2)) + 1
+    return dac_count(a, (n - 1) / 2) + 2
