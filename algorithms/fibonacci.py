@@ -3,10 +3,10 @@
 
 # addCount
 #   counts the amount of additions to calculate F(n)
-def addCount(fib_add_n):
+def add_count(fib_add_n):
     if fib_add_n <= 1:
         return 0
-    return addCount(fib_add_n - 1) + addCount(fib_add_n - 2) + 1
+    return add_count(fib_add_n - 1) + add_count(fib_add_n - 2) + 1
 
 
 # seq
