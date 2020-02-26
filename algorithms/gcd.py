@@ -6,7 +6,7 @@
 def modCount(gcd_m, gcd_n):
     if gcd_n <= 1:
         return 0
-    return modCount(gcd_n, gcd_m % gcd_n)
+    return modCount(gcd_n, gcd_m % gcd_n) + 1
 
 
 def value(gcd_m, gcd_n):
@@ -16,4 +16,4 @@ def value(gcd_m, gcd_n):
         return gcd_n
     if gcd_n == 0:
         return gcd_m
-    return modCount(gcd_n, gcd_m % gcd_n) + 1
+    return modCount(gcd_n, gcd_m % gcd_n)
