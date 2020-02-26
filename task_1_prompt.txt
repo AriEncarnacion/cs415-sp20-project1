@@ -1,0 +1,7 @@
+### Task 1: Fibonacci Sequence and GCD ###
+Input a POSITIVE INTEGER value for 'k' to calculate the following:
+1. Fib(k), where k is the index of the fibonacci sequence
+2. GCD(m, n) where m = Fib(k + 1) and n = Fib(k)
+Output will be generated for both.
+
+Enter a value for 'k':
