@@ -1,6 +1,6 @@
 # User testing mode contains code for user to test each function
 
-from algorithms import gcd as gcd, fibonacci as fib, exponent as exp
+from algorithms import gcd as gcd, fibonacci as fib, exponent as exp, sorting as sort
 
 task_1_prompt_file = open('task_1_prompt.txt')
 task_1_prompt = task_1_prompt_file.read()
@@ -28,9 +28,16 @@ task_2_prompt_part_2_file.close()
 
 print("\n")
 
-task_3_prompt_file = open('task_3_prompt.txt')
-task_3_prompt = task_3_prompt_file.read()
-print(task_3_prompt)
+sort_task = open('task_3_prompt.txt')
+sort_prompt = sort_task.read()
+print(sort_prompt)
+s_arr = list(map(int, input('Enter elements for list:\n').split()))
+i_arr = s_arr.copy()
+c1 = sort.select_sort(s_arr)
+print('Selection Sort: ', s_arr, '\nComparisons: ', c1)
+c2 = sort.insert_sort(i_arr)
+print('Insertion Sort: ', i_arr, '\nComparisons: ', c2)
+
 
 
 # x = 7

@@ -2,8 +2,9 @@
 # fib.x runs fibonacci.py functions
 # gcd.x runs gcd.py functions
 
-from algorithms import gcd as gcd, fibonacci as fib, exponent as exp
+from algorithms import gcd as gcd, fibonacci as fib, exponent as exp, sorting as sort
 import plots as plt
+import random2
 
 # arrays to hold basic operation count for current k-value
 addArr = []
@@ -41,3 +42,48 @@ for n in range(0, 51):
 plt.fib_adds_plot(addArr)
 plt.gcd_mods_plot(gcdModsArr)
 plt.exp_plots(dboArr, dbfArr, dacArr)
+
+
+### Sorting Plots ###
+# i = insertion sort, s = selection sort
+# a = average, b = best, w = worst
+
+i_a, i_b, i_w = [], [], []
+s_a, s_b, s_w = [], [], []
+
+rand_arr = []
+sorted_arr = []
+rev_arr = []
+
+for k in range(1, 101):
+
+# Build list of random ints
+    for i in range(k):
+        rand_arr.append(random2.randint(1, 1000))
+
+    rand_arr2 = rand_arr.copy()
+    sorted_arr.append(k)
+    rev_arr = sorted_arr.copy()
+    rev_arr.reverse()
+    rev_arr2 = rev_arr.copy()
+
+# C(n) lists for all n and relative cases
+    s_a.append(sort.select_sort(rand_arr))
+    s_b.append(sort.select_sort(sorted_arr))
+    s_w.append(sort.select_sort(rev_arr))
+
+    i_a.append(sort.insert_sort(rand_arr2))
+    i_b.append(sort.insert_sort(sorted_arr))
+    i_w.append(sort.insert_sort(rev_arr2))
+
+    rand_arr.clear()
+    rand_arr2.clear()
+
+# Plots for each C(n) list
+plt.select_sort_avg(s_a)
+plt.select_sort_best(s_b)
+plt.select_sort_worst(s_w)
+
+plt.insert_sort_avg(i_a)
+plt.insert_sort_best(i_b)
+plt.insert_sort_worst(i_w)
