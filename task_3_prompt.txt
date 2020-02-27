@@ -1,2 +1,5 @@
 ### Task 3: Sorting ###
-[DIRECTIONS NEEDED]
+Input: A list of integers as:
+    'X0 X1 X2 . . . Xn'
+Output: The list sorted by Selection Sort and
+Insertion sort with relative comparisons

@@ -66,66 +66,96 @@ def exp_plots(dbo_arr, dbf_arr, dac_arr):
 
 
 def select_sort_avg(arr):
-    plt.title("Select Avg")
+    plt.title("Selection Sort Average-Case")
     plt.xlabel('n')
     plt.ylabel('C(n)')
-    plt.plot(arr, label='comparisons', color='red')
-    plt.plot(arr, 'bo')
+    plt.plot(arr, label='comparisons', color='blue')
+    plt.plot(arr, 'b.')
     plt.legend()
+
+    tm = time.gmtime()
+    save_name = "select_sort_avg" + time.strftime("%Y-%m-%d %H:%M:%S", tm)
+    plt.savefig('generated_plots/' + save_name + '.png')
+
     plt.show()
-    print("sel_avg:", arr)
+    print("sel_avg n=", len(arr), ":", arr[len(arr)-1])
 
 
 def select_sort_best(arr):
-    plt.title("Select Best")
+    plt.title("Selection Sort Best-Case")
     plt.xlabel('n')
     plt.ylabel('C(n)')
-    plt.plot(arr, label='comparisons', color='red')
-    plt.plot(arr, 'bo')
+    plt.plot(arr, label='comparisons', color='green')
+    plt.plot(arr, 'g.')
     plt.legend()
+
+    tm = time.gmtime()
+    save_name = "select_sort_best" + time.strftime("%Y-%m-%d %H:%M:%S", tm)
+    plt.savefig('generated_plots/' + save_name + '.png')
+
     plt.show()
-    print("sel_best:", arr)
+    print("sel_best, n=", len(arr), ":", arr[len(arr)-1])
 
 
 def select_sort_worst(arr):
-    plt.title("Select Worst")
+    plt.title("Selection Sort Worst-Case")
     plt.xlabel('n')
     plt.ylabel('C(n)')
     plt.plot(arr, label='comparisons', color='red')
-    plt.plot(arr, 'bo')
+    plt.plot(arr, 'r.')
     plt.legend()
+
+    tm = time.gmtime()
+    save_name = "select_sort_worst" + time.strftime("%Y-%m-%d %H:%M:%S", tm)
+    plt.savefig('generated_plots/' + save_name + '.png')
+
     plt.show()
-    print("sel_worst:", arr)
+    print("sel_worst, n=", len(arr), ":", arr[len(arr)-1])
 
 
 def insert_sort_avg(arr):
-    plt.title("Insertion Sort Avg")
+    plt.title("Insertion Sort Average-Case")
     plt.xlabel('n')
     plt.ylabel('C(n)')
-    plt.plot(arr, label='comparisons', color='red')
-    plt.plot(arr, 'bo')
+    plt.plot(arr, label='comparisons', color='blue')
+    plt.plot(arr, 'b.')
     plt.legend()
+
+    tm = time.gmtime()
+    save_name = "insertion_sort_avg" + time.strftime("%Y-%m-%d %H:%M:%S", tm)
+    plt.savefig('generated_plots/' + save_name + '.png')
+
     plt.show()
-    print("ins_avg:", arr)
+    print("ins_avg, n=", len(arr), ":", arr[len(arr)-1])
 
 
 def insert_sort_best(arr):
-    plt.title("Insertion Sort Best")
+    plt.title("Insertion Sort Best-Case")
     plt.xlabel('n')
     plt.ylabel('C(n)')
-    plt.plot(arr, label='comparisons', color='red')
-    plt.plot(arr, 'bo')
+    plt.plot(arr, label='comparisons', color='green')
+    plt.plot(arr, 'g.')
     plt.legend()
+
+    tm = time.gmtime()
+    save_name = "insertion_sort_best" + time.strftime("%Y-%m-%d %H:%M:%S", tm)
+    plt.savefig('generated_plots/' + save_name + '.png')
+
     plt.show()
-    print("ins_best:", arr)
+    print("ins_best, n=", len(arr), ":", arr[len(arr)-1])
 
 
 def insert_sort_worst(arr):
-    plt.title("Insertion Sort Worst")
+    plt.title("Insertion Sort Worst-Case")
     plt.xlabel('n')
     plt.ylabel('C(n)')
     plt.plot(arr, label='comparisons', color='red')
-    plt.plot(arr, 'bo')
+    plt.plot(arr, 'r.')
     plt.legend()
+
+    tm = time.gmtime()
+    save_name = "insertion_sort_worst" + time.strftime("%Y-%m-%d %H:%M:%S", tm)
+    plt.savefig('generated_plots/' + save_name + '.png')
+
     plt.show()
-    print("ins_worst:", arr)
+    print("ins_worst, n=", len(arr), ":", arr[len(arr)-1])
