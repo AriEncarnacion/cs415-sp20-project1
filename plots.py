@@ -63,3 +63,69 @@ def exp_plots(dbo_arr, dbf_arr, dac_arr):
     print("dec_by_one_plot:", dbo_arr)
     print("dec_by_fctr_plot:", dbf_arr)
     print("div_and_conq_plot:", dac_arr)
+
+
+def select_sort_avg(arr):
+    plt.title("Select Avg")
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(arr, label='comparisons', color='red')
+    plt.plot(arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("sel_avg:", arr)
+
+
+def select_sort_best(arr):
+    plt.title("Select Best")
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(arr, label='comparisons', color='red')
+    plt.plot(arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("sel_best:", arr)
+
+
+def select_sort_worst(arr):
+    plt.title("Select Worst")
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(arr, label='comparisons', color='red')
+    plt.plot(arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("sel_worst:", arr)
+
+
+def insert_sort_avg(arr):
+    plt.title("Insertion Sort Avg")
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(arr, label='comparisons', color='red')
+    plt.plot(arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("ins_avg:", arr)
+
+
+def insert_sort_best(arr):
+    plt.title("Insertion Sort Best")
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(arr, label='comparisons', color='red')
+    plt.plot(arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("ins_best:", arr)
+
+
+def insert_sort_worst(arr):
+    plt.title("Insertion Sort Worst")
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(arr, label='comparisons', color='red')
+    plt.plot(arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("ins_worst:", arr)
