@@ -28,3 +28,25 @@ def gcdModsPlot(gcdModsArr):
     plt.legend()
     plt.show()
     print("gcdModsArr:", gcdModsArr)
+
+
+def s_sort_plot(s_arr):
+    plt.title('Selection Sort Average Case')
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(s_arr, label='comparisons', color='red')
+    plt.plot(s_arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("select_sort:", s_arr)
+
+
+def i_sort_plot(i_arr):
+    plt.title('Insertion Sort Average Case')
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(i_arr, label='comparisons', color='green')
+    plt.plot(i_arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("insertion_sort:", i_arr)
