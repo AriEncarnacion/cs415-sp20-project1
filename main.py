@@ -10,7 +10,7 @@ import random2
 
 # addArr = []
 # gcdModsArr = []
-
+# n = 30
 # for k in range(0, n + 1):
 #     addArr.append(fib.addCount(k))
 #     gcdInput2 = fib.seq(k)
@@ -33,7 +33,7 @@ rand_arr = []
 sorted_arr = []
 rev_arr = []
 
-for k in range(n):
+for k in range(0, n):
     for i in range(k):
         rand_arr.append(random2.randint(1, 50))
 
@@ -49,10 +49,12 @@ for k in range(n):
     i_arr_Best.append(sort.count_i_sort(sorted_arr))
     i_arr_Worst.append(sort.count_i_sort(rev_arr))
 
-plot.s_sort_plot(s_arr_Avg)
-plot.s_sort_plot(s_arr_Best)
-plot.s_sort_plot(s_arr_Worst)
+print("sorted:", sorted_arr)
+print("reversed:", rev_arr)
+plot.s_sort_avg_plot(s_arr_Avg)
+plot.s_sort_best_plot(s_arr_Best)
+plot.s_sort_worst_plot(s_arr_Worst)
 
-plot.i_sort_plot(i_arr_Avg)
-plot.i_sort_plot(i_arr_Best)
-plot.i_sort_plot(i_arr_Worst)
+plot.i_sort_avg_plot(i_arr_Avg)
+plot.i_sort_best_plot(i_arr_Best)
+plot.i_sort_worst_plot(i_arr_Worst)

@@ -30,7 +30,7 @@ def gcdModsPlot(gcdModsArr):
     print("gcdModsArr:", gcdModsArr)
 
 
-def s_sort_plot(s_arr):
+def s_sort_avg_plot(s_arr):
     plt.title('Selection Sort Average Case')
     plt.xlabel('n')
     plt.ylabel('C(n)')
@@ -41,8 +41,52 @@ def s_sort_plot(s_arr):
     print("select_sort:", s_arr)
 
 
-def i_sort_plot(i_arr):
+def s_sort_best_plot(s_arr):
+    plt.title('Selection Sort Best Case')
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(s_arr, label='comparisons', color='red')
+    plt.plot(s_arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("select_sort:", s_arr)
+
+
+def s_sort_worst_plot(s_arr):
+    plt.title('Selection Sort Worst Case')
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(s_arr, label='comparisons', color='red')
+    plt.plot(s_arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("select_sort:", s_arr)
+
+
+def i_sort_avg_plot(i_arr):
     plt.title('Insertion Sort Average Case')
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(i_arr, label='comparisons', color='green')
+    plt.plot(i_arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("insertion_sort:", i_arr)
+
+
+def i_sort_best_plot(i_arr):
+    plt.title('Insertion Sort Best Case')
+    plt.xlabel('n')
+    plt.ylabel('C(n)')
+    plt.plot(i_arr, label='comparisons', color='green')
+    plt.plot(i_arr, 'bo')
+    plt.legend()
+    plt.show()
+    print("insertion_sort:", i_arr)
+
+
+def i_sort_worst_plot(i_arr):
+    plt.title('Insertion Sort Worst Case')
     plt.xlabel('n')
     plt.ylabel('C(n)')
     plt.plot(i_arr, label='comparisons', color='green')
