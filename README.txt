@@ -50,7 +50,7 @@ Notes for commands will be beneath the command and indented.
                 Plots are named by algorithm plotted followed by timestamp. This script does not
                 reset the /generated_plots/ directory so ALL images will be saved. To clear this
                 directory at any point, inside directory /project01_py/ run the command:
-                    > rm generated_plots
+                    > rm generated_plots/*
 
     * run the command:
         > python3 user_test_mode.py
