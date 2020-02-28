@@ -14,7 +14,7 @@ Notes for commands will be beneath the command and indented.
 
     * Open a terminal
 
-    * Navigate to the directory /project01_py
+    * Navigate to the directory /cs415-sp20-project1
 
     * run the command:
         > python3
