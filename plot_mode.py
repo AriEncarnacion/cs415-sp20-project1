@@ -87,3 +87,6 @@ plt.select_sort_worst(s_w)
 plt.insert_sort_avg(i_a)
 plt.insert_sort_best(i_b)
 plt.insert_sort_worst(i_w)
+
+print("\nAll tasks complete.\n")
+
