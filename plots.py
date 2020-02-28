@@ -2,6 +2,7 @@
 
 import matplotlib.pyplot as plt
 import time
+import gc
 
 
 # fibAddsPlot
@@ -22,6 +23,8 @@ def fib_adds_plot(fib_arr):
     plt.show()
     print("addArr:", fib_arr)
 
+    gc.collect()
+
 
 # gcdModsPlot
 #   plots the number of modulo operations from gcd.py/modCount
@@ -40,6 +43,8 @@ def gcd_mods_plot(gcdModsArr):
 
     plt.show()
     print("gcdModsArr:", gcdModsArr)
+
+    gc.collect()
 
 
 # expPlots
@@ -70,6 +75,8 @@ def exp_plots(dbo_arr, dbf_arr, dac_arr):
     print("dec_by_fctr_plot:", dbf_arr)
     print("div_and_conq_plot:", dac_arr)
 
+    gc.collect()
+
 
 def dbo_plot(dbo_arr):
     plt.title("Decrease By One: Multiplications")
@@ -81,7 +88,6 @@ def dbo_plot(dbo_arr):
     tm = time.gmtime()
     save_name = "dec_by_one_M_n " + time.strftime("%Y-%m-%d %H:%M:%S", tm)
     plt.savefig('generated_plots/' + save_name + '.png')
-
     plt.show()
 
 
@@ -95,7 +101,6 @@ def dbf_plot(dbf_arr):
     tm = time.gmtime()
     save_name = "dec_by_cons_factor_M_n " + time.strftime("%Y-%m-%d %H:%M:%S", tm)
     plt.savefig('generated_plots/' + save_name + '.png')
-
     plt.show()
 
 
@@ -109,7 +114,6 @@ def dac_plot(dac_arr):
     tm = time.gmtime()
     save_name = "div_and_conq_M_n " + time.strftime("%Y-%m-%d %H:%M:%S", tm)
     plt.savefig('generated_plots/' + save_name + '.png')
-
     plt.show()
 
 
@@ -128,6 +132,8 @@ def select_sort_avg(arr):
     plt.show()
     print("sel_avg n=", len(arr), ":", arr[len(arr)-1])
 
+    gc.collect()
+
 
 def select_sort_best(arr):
     plt.title("Selection Sort Best-Case")
@@ -143,6 +149,8 @@ def select_sort_best(arr):
 
     plt.show()
     print("sel_best, n=", len(arr), ":", arr[len(arr)-1])
+
+    gc.collect()
 
 
 def select_sort_worst(arr):
@@ -160,6 +168,8 @@ def select_sort_worst(arr):
     plt.show()
     print("sel_worst, n=", len(arr), ":", arr[len(arr)-1])
 
+    gc.collect()
+
 
 def insert_sort_avg(arr):
     plt.title("Insertion Sort Average-Case")
@@ -175,6 +185,8 @@ def insert_sort_avg(arr):
 
     plt.show()
     print("ins_avg, n=", len(arr), ":", arr[len(arr)-1])
+
+    gc.collect()
 
 
 def insert_sort_best(arr):
@@ -192,6 +204,8 @@ def insert_sort_best(arr):
     plt.show()
     print("ins_best, n=", len(arr), ":", arr[len(arr)-1])
 
+    gc.collect()
+
 
 def insert_sort_worst(arr):
     plt.title("Insertion Sort Worst-Case")
@@ -207,3 +221,5 @@ def insert_sort_worst(arr):
 
     plt.show()
     print("ins_worst, n=", len(arr), ":", arr[len(arr)-1])
+
+    gc.collect()
