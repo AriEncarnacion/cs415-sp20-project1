@@ -11,7 +11,7 @@ import random2
 fib_count_arr = []
 for k in range(0, 26):
     fib_count_arr.append(0)
-    fib.fib(k, fib_count_arr, k, "plot")
+    fib.fib(k, fib_count_arr, k)
 
 # D(n) -- Count of Euclid modulus operations for the GCD
 # Will calculate  50 iterations
@@ -27,7 +27,7 @@ for n in range(0, 50):
     gcd_mods_arr.append(0)
     a = fib_seq_literal[n + 1]
     b = fib_seq_literal[n]
-    gcd.gcd(a, b, gcd_mods_arr, n, "plot")
+    gcd.gcd(a, b, gcd_mods_arr, n)
 
 # M(n) -- Count of multiplications for three different
 # implementations of exponentiation
@@ -36,9 +36,9 @@ for n in range(0, 51):
     dbo_arr.append(0)
     dbf_arr.append(0)
     dac_arr.append(0)
-    exp.dec_by_one(2, n, dbo_arr, n, "plot")
-    exp.dec_by_fctr(2, n, dbf_arr, n, "plot")
-    exp.div_and_conq(2, n, dac_arr, n, "plot")
+    exp.dec_by_one(2, n, dbo_arr, n)
+    exp.dec_by_fctr(2, n, dbf_arr, n)
+    exp.div_and_conq(2, n, dac_arr, n)
 
 # plot all basic operations
 plt.fib_adds_plot(fib_count_arr)

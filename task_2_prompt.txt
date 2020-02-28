@@ -3,5 +3,3 @@ Input a POSITIVE INTEGER for 'a' and 'n' to calculate a^n.
 Three calculations will be run to solve the exponentiation problem:
 Decrease by One, Decrease by Constant Factor, Divide and Conquer
 Results for each algorithm will be output.
-
-Enter a value for 'a':
