@@ -29,7 +29,7 @@ for n in range(0, 50):
     b = fib_seq_literal[n]
     gcd.gcd(a, b, gcd_mods_arr, n, "plot")
 
-# M(n) -- Count of multiplications for three different 
+# M(n) -- Count of multiplications for three different
 # implementations of exponentiation
 dbo_arr, dbf_arr, dac_arr = [], [], []
 for n in range(0, 51):
