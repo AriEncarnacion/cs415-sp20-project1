@@ -12,7 +12,10 @@ followed by the command to run.
 
 Notes for commands will be beneath the command and indented.
 
-    * Open a terminal
+    * Open a terminal on your LOCAL MACHINE
+    	Packages will need to be installed. We were unable to figure out how to
+    	install packages on blue with > pip install < as blue kept giving
+    	permission denied errors.
 
     * Navigate to the directory /cs415-sp20-project1
 
