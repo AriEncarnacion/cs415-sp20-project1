@@ -8,13 +8,17 @@ import random2
 
 # calculate basic operations
 # A(k) -- Count of Fibonacci recursive additions
+print("## Running A(k) ##")
 fib_count_arr = []
 for k in range(0, 26):
     fib_count_arr.append(0)
     fib.fib(k, fib_count_arr, k)
+print("A(k) complete")
 
 # D(n) -- Count of Euclid modulus operations for the GCD
 # Will calculate  50 iterations
+print("\n## Running D(n) ##")
+print("iteratively building fibonacci sequnece array for D(n)")
 iterations = 51  # iterations will become 50 due to range() function
 fib_seq_literal = [0, 1]
 for n in range(2, 51):
@@ -26,9 +30,11 @@ for n in range(0, 50):
     a = fib_seq_literal[n + 1]
     b = fib_seq_literal[n]
     gcd.gcd(a, b, gcd_mods_arr, n)
+print("D(n) complete")
 
 # M(n) -- Count of multiplications for three different
 # implementations of exponentiation
+print("\n## Running M(n) ##")
 dbo_arr, dbf_arr, dac_arr = [], [], []
 for n in range(0, 51):
     dbo_arr.append(0)
@@ -37,12 +43,18 @@ for n in range(0, 51):
     exp.dec_by_one(2, n, dbo_arr, n)
     exp.dec_by_fctr(2, n, dbf_arr, n)
     exp.div_and_conq(2, n, dac_arr, n)
+print("M(n) complete")
 
+print("\n## Plotting all arithmetic algorithms ##")
 # plot all basic operations
+print("plotting A(k)")
 plt.fib_adds_plot(fib_count_arr)
+print("plotting D(n)")
 plt.gcd_mods_plot(gcd_mods_arr)
+print("plotting M(n)")
 plt.exp_plots(dbo_arr, dbf_arr, dac_arr)
 
+print("\n## Running sorting ##")
 ### Sorting Plots ###
 # i = insertion sort, s = selection sort
 # a = average, b = best, w = worst
@@ -77,13 +89,20 @@ for k in range(1, 101):
     rand_arr.clear()
     rand_arr2.clear()
 
+print("\n## Plotting all sorting algorithms ##")
 # Plots for each C(n) list
+print("plotting selection sort (average)")
 plt.select_sort_avg(s_a)
+print("plotting selection sort (best)")
 plt.select_sort_best(s_b)
+print("plotting selection sort (worst)")
 plt.select_sort_worst(s_w)
 
+print("plotting insertion sort (average)")
 plt.insert_sort_avg(i_a)
+print("plotting insertion sort (best)")
 plt.insert_sort_best(i_b)
+print("plotting insertion sort (worst)")
 plt.insert_sort_worst(i_w)
 
 print("\nAll tasks complete.\n")
