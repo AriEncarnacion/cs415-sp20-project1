@@ -1,19 +1,9 @@
-# fibonacci sequence functions
-
-
-# addCount
-#   counts the amount of additions to calculate F(n)
-def add_count(fib_add_n):
-    if fib_add_n <= 1:
+# fibonacci sequence
+def fib(n, fib_add_arr, i, mode):
+    if n == 0:
         return 0
-    return add_count(fib_add_n - 1) + add_count(fib_add_n - 2) + 1
-
-
-# seq
-#   calculate the fibonacci number returned from F(n)
-def seq(fib_seq_n):
-    if fib_seq_n == 0:
-        return 0
-    if fib_seq_n == 1:
+    if n == 1:
         return 1
-    return seq(fib_seq_n - 1) + seq(fib_seq_n - 2)
+    if mode == "plot":
+        fib_add_arr[i] += 1
+    return fib(n - 1, fib_add_arr, i, mode) + fib(n - 2, fib_add_arr, i, mode)

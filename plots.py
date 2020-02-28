@@ -3,15 +3,16 @@
 import matplotlib.pyplot as plt
 import time
 
+
 # fibAddsPlot
 #   plots the number of additions from fibonacci.py/addCount
 #   as n increases
-def fib_adds_plot(addArr):
+def fib_adds_plot(fib_arr):
     plt.title('A(k) - Fibonacci Recursive Additions')
     plt.xlabel('n')
     plt.ylabel('Additions')
-    plt.plot(addArr, label='add ops', color='red')
-    plt.plot(addArr, 'r.')
+    plt.plot(fib_arr, label='add ops', color='red')
+    plt.plot(fib_arr, 'r.')
     plt.legend()
 
     tm = time.gmtime()
@@ -19,7 +20,7 @@ def fib_adds_plot(addArr):
     plt.savefig('generated_plots/' + save_name + '.png')
 
     plt.show()
-    print("addArr:", addArr)
+    print("addArr:", fib_arr)
 
 
 # gcdModsPlot
@@ -43,6 +44,10 @@ def gcd_mods_plot(gcdModsArr):
 
 # expPlots
 def exp_plots(dbo_arr, dbf_arr, dac_arr):
+    dbo_plot(dbo_arr)
+    dbf_plot(dbf_arr)
+    dac_plot(dac_arr)
+
     plt.title('M(n) - Multiplications for 3 Exponent Algorithms')
     plt.xlabel('n')
     plt.ylabel('Multiplications')
@@ -60,9 +65,52 @@ def exp_plots(dbo_arr, dbf_arr, dac_arr):
     plt.savefig('generated_plots/' + save_name + '.png')
 
     plt.show()
+
     print("dec_by_one_plot:", dbo_arr)
     print("dec_by_fctr_plot:", dbf_arr)
     print("div_and_conq_plot:", dac_arr)
+
+
+def dbo_plot(dbo_arr):
+    plt.title("Decrease By One: Multiplications")
+    plt.xlabel('n')
+    plt.ylabel('Multiplications')
+    plt.plot(dbo_arr, label='Decrease By One', color='red')
+    plt.plot(dbo_arr, 'r.')
+
+    tm = time.gmtime()
+    save_name = "dec_by_one_M_n " + time.strftime("%Y-%m-%d %H:%M:%S", tm)
+    plt.savefig('generated_plots/' + save_name + '.png')
+
+    plt.show()
+
+
+def dbf_plot(dbf_arr):
+    plt.title("Decrease By Constant Factor: Multiplications")
+    plt.xlabel('n')
+    plt.ylabel('Multiplications')
+    plt.plot(dbf_arr, label='Decrease by Constant Factor', color='blue')
+    plt.plot(dbf_arr, 'b.')
+
+    tm = time.gmtime()
+    save_name = "dec_by_cons_factor_M_n " + time.strftime("%Y-%m-%d %H:%M:%S", tm)
+    plt.savefig('generated_plots/' + save_name + '.png')
+
+    plt.show()
+
+
+def dac_plot(dac_arr):
+    plt.title("Divide and Conquer: Multiplications")
+    plt.xlabel('n')
+    plt.ylabel('Multiplications')
+    plt.plot(dac_arr, label='Divide and Conquer', color='green')
+    plt.plot(dac_arr, 'g.')
+
+    tm = time.gmtime()
+    save_name = "div_and_conq_M_n " + time.strftime("%Y-%m-%d %H:%M:%S", tm)
+    plt.savefig('generated_plots/' + save_name + '.png')
+
+    plt.show()
 
 
 def select_sort_avg(arr):
