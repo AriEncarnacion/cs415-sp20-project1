@@ -20,8 +20,6 @@ fib_seq_literal = [0, 1]
 for n in range(2, 51):
     fib_seq_literal.append(fib_seq_literal[n - 1] + fib_seq_literal[n - 2])
 
-print("Fibonacci sequence literal", fib_seq_literal)
-
 gcd_mods_arr = []
 for n in range(0, 50):
     gcd_mods_arr.append(0)
