@@ -10,7 +10,7 @@ import gc
 #   as n increases
 def fib_adds_plot(fib_arr):
     plt.title('A(k) - Fibonacci Recursive Additions')
-    plt.xlabel('n')
+    plt.xlabel('k')
     plt.ylabel('Additions')
     plt.plot(fib_arr, label='add ops', color='red')
     plt.plot(fib_arr, 'r.')
@@ -79,7 +79,7 @@ def exp_plots(dbo_arr, dbf_arr, dac_arr):
 
 
 def dbo_plot(dbo_arr):
-    plt.title("Decrease By One: Multiplications")
+    plt.title("Decrease By One: D(n) - Multiplications")
     plt.xlabel('n')
     plt.ylabel('Multiplications')
     plt.plot(dbo_arr, label='Decrease By One', color='red')
@@ -92,7 +92,7 @@ def dbo_plot(dbo_arr):
 
 
 def dbf_plot(dbf_arr):
-    plt.title("Decrease By Constant Factor: Multiplications")
+    plt.title("Decrease By Constant Factor: D(n) - Multiplications")
     plt.xlabel('n')
     plt.ylabel('Multiplications')
     plt.plot(dbf_arr, label='Decrease by Constant Factor', color='blue')
@@ -105,7 +105,7 @@ def dbf_plot(dbf_arr):
 
 
 def dac_plot(dac_arr):
-    plt.title("Divide and Conquer: Multiplications")
+    plt.title("Divide and Conquer: D(n) - Multiplications")
     plt.xlabel('n')
     plt.ylabel('Multiplications')
     plt.plot(dac_arr, label='Divide and Conquer', color='green')
