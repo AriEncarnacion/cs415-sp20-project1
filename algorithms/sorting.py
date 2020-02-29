@@ -31,7 +31,8 @@ def insert_sort(arr):
             c += 1
             arr[k], arr[k-1] = arr[k-1], arr[k]
             k -= 1
-        c += 1
+        if k != 0:
+            c += 1
         i += 1
     return c
 
