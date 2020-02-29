@@ -7,6 +7,7 @@ responses = ['y', 'Y', 'n', 'N']
 response = 'y'
 while response == 'y' or response == 'Y':
     fib_arr, gcd_arr = [0], [0]
+    placeholder = [0]
 
     task_1_prompt_file = open('task_1_prompt.txt')
     task_1_prompt = task_1_prompt_file.read()
@@ -17,7 +18,9 @@ while response == 'y' or response == 'Y':
 
     print("Fib(", k, ") is:", fib.fib(k, fib_arr, 0))
     print("Additions:", fib_arr[0])
-    print("GCD(", k + 1, ",", k, ") is:", gcd.gcd(k + 1, k, gcd_arr, 0))
+    m = fib.fib(k + 1, placeholder, 0)
+    n = fib.fib(k, placeholder, 0)
+    print("GCD(", m, ",", n, ") is:", gcd.gcd(m, n, gcd_arr, 0))
     print("Modulos:", gcd_arr[0])
 
     task_1_prompt_file.close()
