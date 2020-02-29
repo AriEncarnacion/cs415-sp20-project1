@@ -17,7 +17,7 @@ Notes for commands will be beneath the command and indented.
     	install packages on blue with > pip install < as blue kept giving
     	permission denied errors.
 
-    * Navigate to the directory /cs415-sp20-project1
+    * Navigate to the directory /project01_py
 
     * run the command:
         > python3

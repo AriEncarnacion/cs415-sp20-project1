@@ -15,7 +15,7 @@ def dec_by_fctr(a, n, dbf_array, i):
     if n % 2 == 0:
         dbf_array[i] += 1
         return dec_by_fctr(a, n / 2, dbf_array, i) ** 2
-    dbf_array[i] += 1
+    dbf_array[i] += 2
     return a * dec_by_fctr(a, (n - 1) / 2, dbf_array, i) ** 2
 
 
